@@ -12,7 +12,7 @@ build website:
     stage: build
     script:
         - yarn install
-        - yarn lint
+        - yarn lint``
         - yarn test
         - yarn build
         - echo $APP_VERSION > build/version.html
@@ -48,6 +48,8 @@ deploy to staging:
     stage: deploy staging
     environment: staging
     extends: .deploy
+
+    
 
 deploy to production:
     stage: deploy production
